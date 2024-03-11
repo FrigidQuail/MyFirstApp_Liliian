@@ -26,7 +26,9 @@ function App() {
       <SymptomsList />
 
       <p className="read-the-docs">
+        <div className='subtext'>
         Please consult the HSE for more information
+        </div>
       </p>
     </>
   );

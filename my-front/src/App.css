@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: rgb(37, 36, 36);
 }
 
 .logo {
@@ -16,6 +17,10 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.subtext {
+  color: green;
 }
 
 @keyframes logo-spin {

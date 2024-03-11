@@ -4,11 +4,12 @@ h3 {
 }
 
 p {
-  color: black;
+  color: plum;
   font-size: large;
 }
 .Def {
   border: 2ch solid #d14ad4;
   padding: 10px;
   margin: 10px;
+  color: white;
 }
