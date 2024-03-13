@@ -9,7 +9,10 @@ p {
 }
 .Def {
   border: 2ch solid #d14ad4;
-  padding: 10px;
+  padding-top: 10px;    /* Adjust top padding as needed */
+  padding-bottom: 10px; /* Adjust bottom padding as needed */
+  padding-left: 70px;   /* More left padding */
+  padding-right: 70px;  /* More right padding */
   margin: 10px;
   color: white;
 }

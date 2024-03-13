@@ -11,8 +11,8 @@ function App() {
 
   let header = "Depression and Anxiety Disorder";
   let info =
-    " There are long-term conditions rather than a specitif event. Take the quiz below and check if you are presenting the symptoms.";
-
+    "These are ongoing conditions rather than the feelings around a specific event. Take the quiz below to check if you are presenting the symptoms.";
+     
   return (
     <>
       <TestHead text="Welcome" color="plum" />
@@ -26,9 +26,9 @@ function App() {
       <SymptomsList />
 
       <p className="read-the-docs">
-        <div className='subtext'>
-        Please consult the HSE for more information
-        </div>
+      <div className='subtext'>
+        Please consult the HSE for more information <a href="http://www.hse.gov.uk" target="_blank">here</a>.
+      </div>
       </p>
     </>
   );

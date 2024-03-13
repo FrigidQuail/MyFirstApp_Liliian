@@ -13,6 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('images/background.jpg'); /* Relative path to the image file in the "images" subdirectory */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

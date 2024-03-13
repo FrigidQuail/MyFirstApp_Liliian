@@ -43,19 +43,20 @@ const SympAnx = [
 export default function SymptomsList() {
   const [count, setCount] = useState(0);
   const [adv, setAdv] = useState("");
-  function Add(i) {
-    if (i.target.checked) {
-      setCount((c) => c + 1);
-    } else {
-      setCount((c) => c - 1);
-    }
+
+  function Add() {
+    setCount((prevCount) => prevCount + 1);
   }
 
   function Sub() {
-    if (count >= 16) {
-      setAdv("Consult your GP for more information");
+    if (count >= 5) {
+      setAdv(
+      <div className="container-consult-message">
+      <div className="consult-message">Consult your doctor about getting help with depression or anxiety. There are many online resources for finding a therapist in your area, and many offer sliding scale options for more affordable mental health care. You're not alone.</div>
+      </div>
+      );
     } else {
-      setAdv("Go cycling, calm down. life is a journey!!!");
+      setAdv("You're doing okay. Keep monitoring your symptoms and know there are many resources online to help you when or if you want it.");
     }
     setCount(0);
   }
@@ -63,8 +64,9 @@ export default function SymptomsList() {
   return (
     <>
       <h3>
-        Please, check the box if you have the symptoms for more than two weeks.
+      Tick the boxes for symptoms that you've been experiencing for over two weeks.
       </h3>
+      <div className="container-col">
       <div className="col">
         <div>
           {SympDep.map((x) => (
@@ -82,6 +84,7 @@ export default function SymptomsList() {
             </div>
           ))}
         </div>
+      </div>
       </div>
       <button onClick={Sub}>Submit</button>
       <br />

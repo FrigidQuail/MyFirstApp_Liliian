@@ -1,16 +1,11 @@
---
--- Drop Tables
---
+-- include sql used to create table
 
-SET foreign_key_checks = 0;
-DROP TABLE if exists items;
-SET foreign_key_checks = 1;
+DROP TABLE if exists all_results;
 
---
--- Create Tables
---
-CREATE TABLE items(
-    id INT NOT NULL AUTO_INCREMENT, 
-    text VARCHAR(40) not null, 
-    complete BOOLEAN, PRIMARY KEY (id)
+CREATE TABLE all_results (
+    id_user INT,
+    dep_answers tinyint(1),
+    anx_answers tinyint(1),
+    seek_help tinyint(1)
     );
+

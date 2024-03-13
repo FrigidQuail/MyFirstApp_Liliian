@@ -1,3 +1,4 @@
+// for routes
 require("dotenv").config();
 const mysql = require("mysql");
 
@@ -16,7 +17,7 @@ module.exports = async function db(query) {
       host: DB_HOST || "127.0.0.1",
       user: DB_USER || "root",
       password: DB_PASS,
-      database: DB_NAME || "database",
+      database: DB_NAME || "symptom_results",
       multipleStatements: true
     });
 
