@@ -6,7 +6,7 @@ export default function Definition() {
     <>
       <div className="Def">
         <h2>➨ Clinical Depression</h2>
-        <p>
+        <p className="inboxdef">
           Depressive disorder, also known as depression is a common mental
           disorder. It involves a depressed mood or loss of pleasure or interest
           in activities for long periods of time. </p> 

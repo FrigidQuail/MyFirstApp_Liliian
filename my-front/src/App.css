@@ -1,9 +1,32 @@
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: rgb(37, 36, 36);
+  /* background-color: rgb(37, 36, 36); */
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+p.ongoing {
+  color: white;
+  font-size: large;
+  padding-left: 10%;
+  padding-right: 10%;
+  max-width: 90%;
+}
+
+p {
+  padding-left: 20%;
+  padding-right: 20%;
+  max-width: 100%;
 }
 
 .logo {

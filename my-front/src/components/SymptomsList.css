@@ -7,6 +7,10 @@ li {
   color: white;
 }
 
+button {
+  margin: 20px;
+}
+
 .styled {
   border: 0;
   font-size: 20px;
@@ -28,7 +32,12 @@ li {
     inset -2px -2px 3px rgb(0 0 0 / 60%);
 }
 
-
+.container-col {
+  background-color: black;
+  padding: 5px;
+  box-shadow: inset -2px -2px 3px rgb(255 255 255 / 60%),
+    inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
 
 .container-consult-message {
   right: 50%;
@@ -64,6 +73,12 @@ li {
   grid-template-columns: repeat(2, 1fr);
   text-align: left;
   font-size: 20px;
-padding-bottom: 3%;
-  margin: auto;
+  padding-bottom: 3%;
+  margin: 50px;
+}
+
+.firstcol, .seccol {
+  padding-left: 40px;
+  padding-top: 10px;
+  color: white;
 }

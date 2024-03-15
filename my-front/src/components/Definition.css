@@ -4,15 +4,22 @@ h3 {
 }
 
 p {
-  color: plum;
+  color: white;
   font-size: large;
+  max-width: 60%;
+  text-align: center;
 }
+
+p.inboxdef {
+  align-items: center;
+  max-width: 700px;
+}
+
 .Def {
   border: 2ch solid #d14ad4;
-  padding-top: 10px;    /* Adjust top padding as needed */
-  padding-bottom: 10px; /* Adjust bottom padding as needed */
-  padding-left: 70px;   /* More left padding */
-  padding-right: 70px;  /* More right padding */
-  margin: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
   color: white;
+  max-width: 60%;
+  justify-content: center;
 }

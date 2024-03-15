@@ -3,41 +3,41 @@ import "./SymptomsList.css";
 import { useState } from "react";
 
 const SympDep = [
-  "continuous low mood or sadness",
-  "feeling hopeless and helpless",
-  "having low self-esteem",
-  "feeling tearful",
-  "feeling worthless or guilty",
-  "feeling irritable and intolerant of others",
-  "having no motivation or interest in things",
-  "finding it difficult to make decisions",
-  "not getting any enjoyment out of life",
-  "irritable mood",
-  "feeling anxious or worried",
-  "having suicidal thoughts or thoughts of harming yourself",
+  " Continuous low mood or sadness",
+  " Feeling hopeless and helpless",
+  " Having low self-esteem",
+  " Feeling tearful",
+  " Feeling worthless or guilty",
+  " Feeling irritable and intolerant of others",
+  " Having no motivation or interest in things",
+  " Finding it difficult to make decisions",
+  " Not getting any enjoyment out of life",
+  " Irritable mood",
+  " Feeling anxious or worried",
+  " Having suicidal thoughts or thoughts of harming yourself",
 ];
 
 const SympAnx = [
-  "restlessness",
-  "a sense of dread",
-  "feeling on edge",
-  "difficulty concentrating",
-  "irritability",
-  "muscle tension",
-  "disturbed sleep",
-  "dizziness",
-  "tiredness",
-  "a strong, fast or irregular heartbeat",
-  "muscle aches and tension",
-  "trembling or shaking",
-  "a dry mouth",
-  "excessive sweating",
-  "shortness of breath",
-  "tummy ache",
-  "feeling sick",
-  "a headache",
-  "pins and needles",
-  "difficulty falling or staying asleep",
+  " Restlessness",
+  " A sense of dread",
+  " Feeling on edge",
+  " Difficulty concentrating",
+  " Irritability",
+  " Muscle tension",
+  " Disturbed sleep",
+  " Dizziness",
+  " Tiredness",
+  " A strong, fast or irregular heartbeat",
+  " Muscle aches and tension",
+  " Trembling or shaking",
+  " A dry mouth",
+  " Excessive sweating",
+  " Shortness of breath",
+  " Stomach ache",
+  " Feeling sick",
+  " A headache",
+  " Pins and needles",
+  " Difficulty falling or staying asleep",
 ];
 
 export default function SymptomsList() {
@@ -70,7 +70,7 @@ export default function SymptomsList() {
       <div className="col">
         <div>
           {SympDep.map((x) => (
-            <div>
+            <div className="firstcol">
               <input type="checkbox" id={x} name={x} onClick={(i) => Add(i)} />
               <label for={x}>{x}</label>
             </div>
@@ -78,7 +78,7 @@ export default function SymptomsList() {
         </div>
         <div>
           {SympAnx.map((x) => (
-            <div>
+            <div className="seccol">
               <input type="checkbox" id={x} name={x} onClick={Add} />
               <label for={x}>{x}</label>
             </div>

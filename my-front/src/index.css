@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(191, 50, 50, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,7 +16,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('images/background.jpg'); /* Relative path to the image file in the "images" subdirectory */
+  background-image: url('assets/rustic-gray-concrete-textured-background.jpg'); /* Relative path to the image file in the "images" subdirectory */
   background-size: cover;
   background-repeat: no-repeat;
 }

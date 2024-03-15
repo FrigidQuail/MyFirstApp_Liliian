@@ -5,13 +5,14 @@ import "./App.css";
 import TestHead from "./components/TestHead";
 import SymptomsList from "./components/SymptomsList"; // new
 import Definition from "./components/Definition"; // new
+import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
 
   let header = "Depression and Anxiety Disorder";
   let info =
-    "These are ongoing conditions rather than the feelings around a specific event. Take the quiz below to check if you are presenting the symptoms.";
+  <p className="ongoing"> These are ongoing conditions rather than the feelings around a specific event. Take the quiz below to check if you are presenting the symptoms.</p>;
      
   return (
     <>
