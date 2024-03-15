@@ -15,7 +15,7 @@ export default function Definition() {
         </p>
 
         <h2>➨ Anxiety Disorder</h2>
-        <p>
+        <p className="inboxdef">
           Anxiety disorders are characterised by excessive fear and worry and
           related behavioural disturbances. Symptoms are severe enough to result
           in significant distress or significant impairment in functioning.

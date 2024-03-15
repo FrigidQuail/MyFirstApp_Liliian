@@ -1,6 +1,7 @@
 h3 {
-  color: blueviolet;
+  color: rgb(177, 112, 237);
   font-size: x-large;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 p {
@@ -12,7 +13,9 @@ p {
 
 p.inboxdef {
   align-items: center;
-  max-width: 700px;
+  max-width: 900px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .Def {

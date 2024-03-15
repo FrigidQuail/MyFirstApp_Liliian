@@ -8,6 +8,7 @@
 
 body {
   margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
@@ -43,7 +44,11 @@ p {
 }
 
 .subtext {
-  color: green;
+  color: rgba(191, 50, 50, 0.87);
+  font-weight: bold;
+  font-size: 1.4em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
 }
 
 @keyframes logo-spin {
@@ -69,10 +74,15 @@ p {
   color: #888;
 }
 
+
 .plum {
   color: plum;
 }
 
 .green {
   color: green;
+}
+
+a {
+  color:blue;
 }
