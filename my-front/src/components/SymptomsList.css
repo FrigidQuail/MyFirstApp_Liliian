@@ -40,14 +40,6 @@ button {
     inset 2px 2px 3px rgb(0 0 0 / 60%);
 }
 
-.container-consult-message {
-  right: 50%;
-  left: 50%;
-  color: rgba(191, 50, 50, 0.87);
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
 .adv {
   right: 50%;
   left: 50%;
