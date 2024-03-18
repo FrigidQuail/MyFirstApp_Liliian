@@ -16,18 +16,28 @@ function App() {
      
   return (
     <>
-      <TestHead text="Welcome" color="plum" />
-      <div>
+      <TestHead text="Welcome!" color="plum" />
+      <img 
+      src="/quiz-title.png" 
+      alt="Intro to page" 
+      style={{ width: '60%', height: '60%' }} 
+    />
+      {/* <div>
         <h2>{header}</h2>
         <p>{info}</p>
-      </div>
-      <h1>Mental Health Quiz</h1>
-
+      </div> */}
+      
+      <img 
+      src="/mental-health-quiz-title.png" 
+      alt="Intro to page" 
+      style={{ width: '70%', height: '70%' }} 
+    />
+      {/* <h1>Mental Health Quiz</h1> */}
       <Definition />
       <SymptomsList />
-
       <p className="read-the-docs">
       <div className='subtext'>
+        <hr />
         Please consult the HSE for more information <a href="http://www.hse.gov.uk" target="_blank">here</a>.
       </div>
       </p>

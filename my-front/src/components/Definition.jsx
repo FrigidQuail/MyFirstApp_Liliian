@@ -4,7 +4,14 @@ import "./Definition.css";
 export default function Definition() {
   return (
     <>
-      <div className="Def">
+
+    <img 
+      src="/defs.png" 
+      alt="Definitions of depression and anxiety" 
+      style={{ width: '60%', height: '60%' }} // Adjust width as needed, 'auto' maintains aspect ratio
+    />
+    
+    {/* <div className="Def">
         <h2>➨ Clinical Depression</h2>
         <p className="inboxdef">
           Depressive disorder, also known as depression is a common mental
@@ -22,7 +29,7 @@ export default function Definition() {
           </p>
         <p style={{ fontStyle: 'italic', textAlign: 'right', fontSize: 'smaller' }}>Source: World Health Organization.
           </p>
-      </div>
+      </div> */}
     </>
   );
 }
