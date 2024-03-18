@@ -20,18 +20,20 @@ function App() {
       <img 
       src="/quiz-title.png" 
       alt="Intro to page" 
-      style={{ width: '60%', height: '60%' }} 
+      style={{ width: '40%', height: '40%' }} 
     />
       {/* <div>
         <h2>{header}</h2>
         <p>{info}</p>
       </div> */}
       
+      <div className="mentalhealthtitleimg">
       <img 
       src="/mental-health-quiz-title.png" 
       alt="Intro to page" 
-      style={{ width: '70%', height: '70%' }} 
-    />
+      style={{ width: '50%', height: '50%' }} 
+    /></div>
+
       {/* <h1>Mental Health Quiz</h1> */}
       <Definition />
       <SymptomsList />

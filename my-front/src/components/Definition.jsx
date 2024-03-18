@@ -5,11 +5,11 @@ export default function Definition() {
   return (
     <>
 
-    <img 
+    <div className="defsimage"><img 
       src="/defs.png" 
       alt="Definitions of depression and anxiety" 
-      style={{ width: '60%', height: '60%' }} // Adjust width as needed, 'auto' maintains aspect ratio
-    />
+      style={{ width: '60%', height: '60%' }} 
+    /></div>
     
     {/* <div className="Def">
         <h2>➨ Clinical Depression</h2>

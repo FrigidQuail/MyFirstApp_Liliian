@@ -63,9 +63,17 @@ export default function SymptomsList() {
 
   return (
     <>
-      <h3>
+    <div className="tick-instructions">
+      <img 
+      src="/tick-instructions.png" 
+      alt="Instructions" 
+      style={{ width: '30%', height: '30%' }} 
+    /></div>
+
+      {/* <h3>
       Tick the boxes for symptoms that you've been experiencing for over two weeks.
-      </h3>
+      </h3> */}
+
       <div className="container-col">
       <div className="col">
         <div>
