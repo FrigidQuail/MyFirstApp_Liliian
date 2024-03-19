@@ -7,6 +7,9 @@ import SymptomsList from "./components/SymptomsList"; // new
 import Definition from "./components/Definition"; // new
 import "./App.css";
 
+
+//this is a note to test something
+
 function App() {
   const [count, setCount] = useState(0);
 
