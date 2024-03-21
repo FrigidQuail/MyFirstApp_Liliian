@@ -5,7 +5,6 @@ import "./App.css";
 import TestHead from "./components/TestHead";
 import SymptomsList from "./components/SymptomsList"; // new
 import Definition from "./components/Definition"; // new
-import "./App.css";
 
 
 //this is a note to test something
@@ -49,15 +48,6 @@ function App() {
     </>
   );
 }
-
-
-
-fetch("url.json")
-  .then((response) => response.json())
-  .then((data) => console.log(data));
-
-
-
 
 
 export default App;
