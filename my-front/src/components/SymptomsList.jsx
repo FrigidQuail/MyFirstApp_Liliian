@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import "./SymptomsList.css";
-import { useState } from "react";
+
 
 const SympDep = [
   " Continuous low mood or sadness",
@@ -40,6 +40,46 @@ const SympAnx = [
   " Difficulty falling or staying asleep",
 ];
 
+const SymptomsList = () => {
+  const [count, setCount] = useState(0);
+  const [adv, setAdv] = useState("");
+
+  const handleItemTick = (itemId, isChecked) => {
+    console.log(`Item ${itemId} is now ${isChecked ? 'checked' : 'unchecked'}`);
+  };
+}
+
+const Item = ({ id, name, onItemTick }) => {
+    const [isChecked, setIsChecked] = useState(false);
+};
+
+const handleTick = async () => {
+  setIsChecked(!isChecked);
+  // Send request to backend when user ticks/unticks an item
+  try {
+    await axios.post("/api/tick-item", { itemId: id, isChecked: !isChecked });
+    // Call callback function to update parent component state if needed
+    onItemTick(id, !isChecked);
+  } catch (error) {
+    console.error("Error ticking item:", error);
+  }
+};
+
+return (
+  <div>
+    <input
+      type="checkbox"
+      checked={isChecked}
+      onChange={handleTick}
+    />
+    <label>{name}</label>
+  </div>
+);
+};
+
+
+
+
 export default function SymptomsList() {
   const [count, setCount] = useState(0);
   const [adv, setAdv] = useState("");
@@ -76,7 +116,18 @@ export default function SymptomsList() {
 
       <div className="container-col">
       <div className="col">
-        <div>
+      <div>
+  {SympDep.map((x, index) => (
+    <Item key={`dep_${index}`} id={`dep_${index}`} name={x} onItemTick={handleItemTick} />
+  ))}
+</div>
+<div>
+  {SympAnx.map((x, index) => (
+    <Item key={`anx_${index}`} id={`anx_${index}`} name={x} onItemTick={handleItemTick} />
+  ))}
+</div>
+
+        {/* <div>
           {SympDep.map((x) => (
             <div className="firstcol">
               <input type="checkbox" id={x} name={x} onClick={(i) => Add(i)} />
@@ -91,7 +142,7 @@ export default function SymptomsList() {
               <label for={x}>{x}</label>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
       </div>
       <button onClick={Sub}>Submit</button>

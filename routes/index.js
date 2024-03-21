@@ -7,11 +7,11 @@ router.get("/", function (req, res, next) {
 });
 
 module.exports = router;
-//write one route
 
 app.get('/api/data', async (req, res) => {
   try {
       // Fetch data from the database
+      //but where/how to indicate the right db from model folder?
       const data = await fetchDataFromDatabase();
 
       // Send response back to client with the fetched data
@@ -21,3 +21,4 @@ app.get('/api/data', async (req, res) => {
       res.status(500).json({ error: 'Internal server error' });
   }
 });
+
