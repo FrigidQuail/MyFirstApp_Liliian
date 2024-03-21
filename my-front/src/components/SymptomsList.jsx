@@ -47,85 +47,94 @@ const SymptomsList = () => {
   const handleItemTick = (itemId, isChecked) => {
     console.log(`Item ${itemId} is now ${isChecked ? 'checked' : 'unchecked'}`);
   };
-}
 
-const Item = ({ id, name, onItemTick }) => {
+  const Item = ({ id, name, onItemTick }) => {
     const [isChecked, setIsChecked] = useState(false);
-};
 
-const handleTick = async () => {
-  setIsChecked(!isChecked);
-  // Send request to backend when user ticks/unticks an item
-  try {
-    await axios.post("/api/tick-item", { itemId: id, isChecked: !isChecked });
-    // Call callback function to update parent component state if needed
-    onItemTick(id, !isChecked);
-  } catch (error) {
-    console.error("Error ticking item:", error);
-  }
-};
+    const handleTick = async () => {
+      setIsChecked(!isChecked);
+      // Send request to backend when user ticks/unticks an item
+      
+      try {
+        await axios.post("/api/tick-item", { itemId: id, isChecked: !isChecked });
+        // Call callback function to update parent component state if needed
+        onItemTick(id, !isChecked);
+      } catch (error) {
+        console.error("Error ticking item:", error);
+      }
+    };
 
-return (
-  <div>
-    <input
-      type="checkbox"
-      checked={isChecked}
-      onChange={handleTick}
-    />
-    <label>{name}</label>
-  </div>
-);
-};
-
-
-
-
-export default function SymptomsList() {
-  const [count, setCount] = useState(0);
-  const [adv, setAdv] = useState("");
+    return (
+      <div>
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={handleTick}
+        />
+        <label>{name}</label>
+      </div>
+    );
+  };
 
   function Add() {
     setCount((prevCount) => prevCount + 1);
   }
 
   function Sub() {
-    if (count >= 5) {
-      setAdv(
-      <div className="container-consult-message">
-      <div className="consult-message">Consult your doctor about getting help with depression or anxiety. There are many online resources for finding a therapist in your area, and many offer sliding scale options for more affordable mental health care. You're not alone.</div>
-      </div>
+    // Count the total number of ticked items
+    const totalTickedItems = document.querySelectorAll('input[type="checkbox"]:checked').length;
+  
+    // Define the message based on the count of ticked items
+    let message = "";
+    if (totalTickedItems >= 5) {
+      message = (
+        <div className="container-consult-message">
+          <div className="consult-message">Consult your doctor about getting help with depression or anxiety. There are many online resources for finding a therapist in your area, and many offer sliding scale options for more affordable mental health care. You're not alone.</div>
+        </div>
       );
     } else {
-      setAdv("You're doing okay. Keep monitoring your symptoms and know there are many resources online to help you when or if you want it.");
+      message = "You're doing okay. Keep monitoring your symptoms and know there are many resources online to help you when or if you want it.";
     }
+  
+    // Update the message state
+    setAdv(message);
+  
+    // Reset the count
     setCount(0);
   }
 
   return (
     <>
-    <div className="tick-instructions">
-      <img 
-      src="/tick-instructions.png" 
-      alt="Instructions" 
-      style={{ width: '30%', height: '30%' }} 
-    /></div>
-
-      {/* <h3>
-      Tick the boxes for symptoms that you've been experiencing for over two weeks.
-      </h3> */}
+      <div className="tick-instructions">
+        <img 
+          src="/tick-instructions.png" 
+          alt="Instructions" 
+          style={{ width: '30%', height: '30%' }} 
+        />
+      </div>
 
       <div className="container-col">
-      <div className="col">
-      <div>
-  {SympDep.map((x, index) => (
-    <Item key={`dep_${index}`} id={`dep_${index}`} name={x} onItemTick={handleItemTick} />
-  ))}
-</div>
-<div>
-  {SympAnx.map((x, index) => (
-    <Item key={`anx_${index}`} id={`anx_${index}`} name={x} onItemTick={handleItemTick} />
-  ))}
-</div>
+        <div className="col">
+          <div>
+            {SympDep.map((x, index) => (
+              <Item key={`dep_${index}`} id={`dep_${index}`} name={x} onItemTick={handleItemTick} />
+            ))}
+          </div>
+          <div>
+            {SympAnx.map((x, index) => (
+              <Item key={`anx_${index}`} id={`anx_${index}`} name={x} onItemTick={handleItemTick} />
+            ))}
+          </div>
+        </div>
+      </div>
+      <button onClick={Sub}>Submit</button>
+      <br />
+      <div className="adv">{adv}</div>
+    </>
+  );
+}
+
+export default SymptomsList;
 
         {/* <div>
           {SympDep.map((x) => (
@@ -143,11 +152,3 @@ export default function SymptomsList() {
             </div>
           ))}
         </div> */}
-      </div>
-      </div>
-      <button onClick={Sub}>Submit</button>
-      <br />
-      <div className="adv">{adv}</div>
-    </>
-  );
-}
