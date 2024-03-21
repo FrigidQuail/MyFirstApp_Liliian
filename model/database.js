@@ -30,3 +30,7 @@ con.connect(function(err) {
 
   con.end();
 });
+
+module.exports = {
+  fetchDataFromDatabase
+};

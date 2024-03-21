@@ -50,4 +50,14 @@ function App() {
   );
 }
 
+
+
+fetch("url.json")
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
+
+
+
+
 export default App;

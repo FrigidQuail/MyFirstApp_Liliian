@@ -8,3 +8,16 @@ router.get("/", function (req, res, next) {
 
 module.exports = router;
 //write one route
+
+app.get('/api/data', async (req, res) => {
+  try {
+      // Fetch data from the database
+      const data = await fetchDataFromDatabase();
+
+      // Send response back to client with the fetched data
+      res.json(data);
+  } catch (error) {
+      console.error('Error fetching data from database:', error);
+      res.status(500).json({ error: 'Internal server error' });
+  }
+});
