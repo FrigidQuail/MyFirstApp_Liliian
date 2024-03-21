@@ -9,7 +9,7 @@ router.get("/", function (req, res, next) {
 router.post('/api/tick-item', (req, res) => {
   // Extract data from the request body
   const { itemId, isChecked } = req.body;
-  
+
   res.status(200).json({ message: 'Item ticked successfully' });
 });
 
@@ -31,3 +31,4 @@ module.exports = router;
 //   }
 // });
 
+//POST request url: http://localhost:5173/api/tick-item
