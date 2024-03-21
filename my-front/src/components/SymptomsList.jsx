@@ -46,7 +46,7 @@ const SymptomsList = () => {
 
   const handleItemTick = (itemId, isChecked) => {
     console.log(`Item ${itemId} is now ${isChecked ? 'checked' : 'unchecked'}`);
-  }};
+  };
 
   const Item = ({ id, name, onItemTick }) => {
     const [isChecked, setIsChecked] = useState(false);
@@ -63,8 +63,8 @@ const SymptomsList = () => {
           },
           body: JSON.stringify({ itemId: id, isChecked: !isChecked }),
         });
-
-        // Call callback function to update parent component state if needed
+      
+      // Call callback function to update parent component state if needed
         onItemTick(id, !isChecked);
       } catch (error) {
         console.error("Error ticking item:", error);
@@ -81,7 +81,7 @@ const SymptomsList = () => {
         <label>{name}</label>
       </div>
     );
-  ;
+  };
 
   function Add() {
     setCount((prevCount) => prevCount + 1);
@@ -108,7 +108,7 @@ const SymptomsList = () => {
   
     // Reset the count
     setCount(0);
-  
+  }
 
   return (
     <>
@@ -139,7 +139,23 @@ const SymptomsList = () => {
       <div className="adv">{adv}</div>
     </>
   );
-  }}
-
+}
 
 export default SymptomsList;
+
+        {/* <div>
+          {SympDep.map((x) => (
+            <div className="firstcol">
+              <input type="checkbox" id={x} name={x} onClick={(i) => Add(i)} />
+              <label for={x}>{x}</label>
+            </div>
+          ))}
+        </div>
+        <div>
+          {SympAnx.map((x) => (
+            <div className="seccol">
+              <input type="checkbox" id={x} name={x} onClick={Add} />
+              <label for={x}>{x}</label>
+            </div>
+          ))}
+        </div> */}
