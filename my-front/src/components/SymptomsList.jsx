@@ -140,6 +140,6 @@ const SymptomsList = () => {
     </>
   );
   }}
-}
+
 
 export default SymptomsList;
