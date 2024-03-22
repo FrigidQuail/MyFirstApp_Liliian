@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React from "react";
 //import reactLogo from "./assets/react.svg";
 //import viteLogo from "/vite.svg";
 import "./App.css";
@@ -6,15 +6,16 @@ import TestHead from "./components/TestHead";
 import SymptomsList from "./components/SymptomsList"; // new
 import Definition from "./components/Definition"; // new
 
-
-//this is a note to test something
+//STILL GETTING ERROR FROM REACT ON LINE 1, BUT IF I REMOVE IT, MY SITE BREAKS. WHAT DO I DO?
 
 function App() {
-  const [count, setCount] = useState(0);
 
-  let header = "Depression and Anxiety Disorder";
-  let info =
-  <p className="ongoing"> These are ongoing conditions rather than the feelings around a specific event. Take the quiz below to check if you are presenting the symptoms.</p>;
+  //Old code: (13-17)
+  // const [count, setCount] = useState(0);
+
+  // let header = "Depression and Anxiety Disorder";
+  // let info =
+  // <p className="ongoing"> These are ongoing conditions rather than the feelings around a specific event. Take the quiz below to check if you are presenting the symptoms.</p>;
      
   return (
     <>

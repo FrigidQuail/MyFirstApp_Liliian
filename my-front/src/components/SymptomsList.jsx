@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./SymptomsList.css";
 
 
+
 const SympDep = [
   " Continuous low mood or sadness",
   " Feeling hopeless and helpless",
