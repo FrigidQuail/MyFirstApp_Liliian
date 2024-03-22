@@ -18,8 +18,8 @@ app.use(cookieParser());
 
 app.use("/", indexRouter);
 
-router.get("/api", function (req, res, next) {
-    res.send({ title: "Express" });
-  });
+// router.get("/api", function (req, res, next) {
+//     res.send({ title: "Express" });
+//   });
 
 module.exports = app;
