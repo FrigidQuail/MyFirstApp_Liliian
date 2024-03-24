@@ -1,19 +1,26 @@
 var express = require("express");
 var router = express.Router();
+const db = require("../model/helper");
 
-/* GET home page. */
+/* GET ticked items number */
 router.get("/api/tick-item", function (req, res, next) {
-  res.send({ title: "Express" });
+  db("SELECT * FROM ticked_items;")
+  .then(results => {
+    res.send(results.data);
+  })
+  .catch(err => res.status(500).send(err));
 });
 
 router.post('/api/tick-item', (req, res) => {
-  // Extract data from the request body
   const { itemId, isChecked } = req.body;
 
   res.status(200).json({ message: 'Item ticked successfully' });
 });
 
 module.exports = router;
+
+
+
 
 // module.exports = router;
 

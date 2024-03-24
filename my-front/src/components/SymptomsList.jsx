@@ -117,7 +117,7 @@ const SymptomsList = () => {
         <img 
           src="/tick-instructions.png" 
           alt="Instructions" 
-          style={{ width: '30%', height: '30%' }} 
+          style={{ width: '35%', height: '35%' }} 
         />
       </div>
 
