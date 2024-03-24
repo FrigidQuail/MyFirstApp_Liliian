@@ -2,17 +2,20 @@ var express = require("express");
 var router = express.Router();
 const db = require("../model/helper");
 
-/* GET ticked items number */
-router.get("/api/tick-item", function (req, res, next) {
-  db("SELECT * FROM ticked_items;")
+/* GET ticked items - boolean */
+  // Handle GET request
+router.get("/api/tickItem", function (req, res, next) {
+  db("SELECT * FROM tickItem;")
   .then(results => {
     res.send(results.data);
   })
   .catch(err => res.status(500).send(err));
 });
 
-router.post('/api/tick-item', (req, res) => {
-  const { itemId, isChecked } = req.body;
+
+  // Handle POST request for creating a new tick item
+router.post('/api/tickItem', (req, res) => {
+  let { itemId = null, isChecked = false} = req.body;
 
   res.status(200).json({ message: 'Item ticked successfully' });
 });

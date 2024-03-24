@@ -17,7 +17,7 @@ module.exports = async function db(query) {
       host: DB_HOST || "127.0.0.1",
       user: DB_USER || "root",
       password: DB_PASS,
-      database: DB_NAME || "symptom_results",
+      database: DB_NAME || "all_results",
       multipleStatements: true
     });
 
