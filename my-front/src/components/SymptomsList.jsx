@@ -57,7 +57,7 @@ const SymptomsList = () => {
       // Send request to backend when user ticks/unticks an item
       
       try {
-        await fetch("/api/tick-item", {
+        await fetch("/api/itemTick", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -143,20 +143,3 @@ const SymptomsList = () => {
 }
 
 export default SymptomsList;
-
-        {/* <div>
-          {SympDep.map((x) => (
-            <div className="firstcol">
-              <input type="checkbox" id={x} name={x} onClick={(i) => Add(i)} />
-              <label for={x}>{x}</label>
-            </div>
-          ))}
-        </div>
-        <div>
-          {SympAnx.map((x) => (
-            <div className="seccol">
-              <input type="checkbox" id={x} name={x} onClick={Add} />
-              <label for={x}>{x}</label>
-            </div>
-          ))}
-        </div> */}

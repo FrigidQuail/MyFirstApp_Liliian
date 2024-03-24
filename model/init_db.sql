@@ -1,7 +1,9 @@
 -- include sql used to create table
 
-DROP TABLE if exists tickItem;
+-- drop tables:
+DROP TABLE if exists items;
 
+--create
 CREATE TABLE tickItem (
         itemId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         isChecked tinyint(1)
