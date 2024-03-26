@@ -4,8 +4,8 @@ const db = require("../model/helper");
 
 /* GET ticked items - boolean */
   // Handle GET request
-router.get("/api/tickItem", function (req, res, next) {
-  db("SELECT * FROM tickItem;")
+router.get("/api/itemTick", function (req, res, next) {
+  db("SELECT * FROM itemTick;")
   .then(results => {
     res.send(results.data);
   })
@@ -15,7 +15,7 @@ router.get("/api/tickItem", function (req, res, next) {
 
 
   // Handle POST request for creating a new tick item
-router.post('/api/tickItem', async (req, res) => {
+router.post('/api/itemTick', async (req, res) => {
   let { itemId, isChecked = true} = req.body;
   try {
     await db(`INSERT INTO itemId ("${itemId}", "${isChecked}");`)

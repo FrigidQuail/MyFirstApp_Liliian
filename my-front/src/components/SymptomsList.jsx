@@ -57,7 +57,7 @@ const SymptomsList = () => {
       // Send request to backend when user ticks/unticks an item
       
       try {
-        await fetch("/api/itemTick", {
+        await fetch("/api/tickitem", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
