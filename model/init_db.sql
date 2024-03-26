@@ -4,7 +4,7 @@
 DROP TABLE if exists items;
 
 --create
-CREATE TABLE tickitem (
+CREATE TABLE itemtick (
         itemId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         isChecked tinyint(1)
 );

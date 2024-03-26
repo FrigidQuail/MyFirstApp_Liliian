@@ -4,7 +4,7 @@ const db = require("../model/helper");
 
 /* GET ticked items - boolean */
   // Handle GET request
-router.get("/api/itemTick", function (req, res, next) {
+router.get("/api/itemtick", function (req, res, next) {
   db("SELECT * FROM itemTick;")
   .then(results => {
     res.send(results.data);

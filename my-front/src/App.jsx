@@ -1,12 +1,9 @@
 import React from "react";
-//import reactLogo from "./assets/react.svg";
-//import viteLogo from "/vite.svg";
 import "./App.css";
 import TestHead from "./components/TestHead";
 import SymptomsList from "./components/SymptomsList"; // new
 import Definition from "./components/Definition"; // new
 
-//STILL GETTING ERROR FROM REACT ON LINE 1, BUT IF I REMOVE IT, MY SITE BREAKS. WHAT DO I DO?
 
 function App() {
 

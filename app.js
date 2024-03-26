@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 app.use("/", indexRouter);
 
-// router.get("/api/itemTick", function (req, res, next) {
+// router.get("/api/itemtick", function (req, res, next) {
 //     res.send({ title: "Express" });
 //   });
 
