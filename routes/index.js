@@ -18,12 +18,12 @@ router.get("/api/itemtick", function (req, res, next) {
 router.post('/api/itemTick', async (req, res) => {
   let { itemId, isChecked = true} = req.body;
   try {
-    await db(`INSERT INTO itemId ("${itemId}", "${isChecked}");`)
-    let response = await db("SELECT * FROM itemId;")
-    res.send(response.data);
-  } catch(error) {
+    await db(`INSERT INTO itemtick (symptomId, isChecked) VALUES ("${itemId}", "${isChecked}");`)
+    let response = await db("SELECT * FROM itemtick;")
+    res.status(200).send(response.data);;
+  }
+   catch(error) {
     console.error('Error occurred:', error);
-  res.status(200).json({ message: 'Item successfully ticked' });
 }});
 
 module.exports = router;

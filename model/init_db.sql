@@ -1,7 +1,7 @@
 -- include sql used to create table
 
 -- drop tables:
-DROP TABLE if exists items;
+DROP TABLE if exists itemtick;
 
 --create
 CREATE TABLE itemtick (
