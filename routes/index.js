@@ -16,9 +16,9 @@ router.get("/api/itemtick", function (req, res, next) {
 
   // Handle POST request for creating a new tick item
 router.post('/api/itemTick', async (req, res) => {
-  let { itemId, isChecked = true} = req.body;
+  let { itemId, isChecked } = req.body;
   try {
-    await db(`INSERT INTO itemtick (symptomId, isChecked) VALUES ("${itemId}", "${isChecked}");`)
+    await db(`INSERT INTO itemtick (symptomId, isChecked) VALUES ("${itemId}", ${isChecked});`)
     let response = await db("SELECT * FROM itemtick;")
     res.status(200).send(response.data);;
   }
